@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
-import Jobs from './pages/Jobs';
+import Jobs from './pages/Jobs/Jobs'
 import NavBar from './components/Navbar'
 import JobInfo from './pages/JobInfo';
 
@@ -17,6 +17,8 @@ function App() {
     <Jobs/>
     <Jobs/>
     <Jobs/>
+    
+    
 
       <Router>
         <NavBar/>
