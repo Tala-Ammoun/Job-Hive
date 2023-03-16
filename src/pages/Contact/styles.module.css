@@ -1,0 +1,58 @@
+.card {
+      margin: 20;
+      background: #ededeb;
+    }
+.heading {
+      text-align: center;
+      font-family: "Times New Roman";
+      background: brown;
+      min-height: 50;
+      line-height: 3;
+      font-size: 1.5rem;
+      color: white;
+      padding: 0 20px;
+    }
+content {
+      float: left;
+      margin-left: 60;
+      margin-right: 200;
+      font-family: "Times New Roman";
+      padding-left: 30;
+      padding-right: 30;
+      padding-bottom: 20;
+    }
+button {
+      margin-left: 530;
+      margin-bottom: 10;
+      margin-top: 10;
+      font-family: "Times New Roman";
+      border: none;
+      border-radius: 10;
+      padding-top: 10;
+      padding-bottom: 10;
+      padding-left: 50;
+      padding-right: 50;
+      background: brown;
+      color: white;
+    }
+input{
+      width: 400;
+      text-align: center;
+      padding: 10;
+      margin-left: 400;
+      border-radius: 5;
+      border: solid #ccc;
+      margin-top: 15;
+      margin-bottom: 5;
+      font-family:"Times New Roman";
+      font-size:16;
+    }
+link{
+      text-decoration: none;
+      color: black;
+      font-family:"Times New Roman";
+      margin-right: 50;
+    }
+link:hover {
+        background-color: #555;
+      }
