@@ -12,7 +12,12 @@ function App() {
     <div >
       <h1 className="text-3xl font-bold underline bg-red-300">
       Hello Project 2!
+     
     </h1>
+    <Jobs/>
+    <Jobs/>
+    <Jobs/>
+
       <Router>
         <NavBar/>
         <Routes>
