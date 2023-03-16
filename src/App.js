@@ -9,8 +9,10 @@ import JobInfo from './pages/JobInfo';
 
 function App() {
   return (
-    <div className="App">
-      <hi>Hello Project 2</hi>
+    <div >
+      <h1 className="text-3xl font-bold underline bg-red-300">
+      Hello Project 2!
+    </h1>
       <Router>
         <NavBar/>
         <Routes>
@@ -26,3 +28,5 @@ function App() {
 }
 
 export default App;
+
+      
