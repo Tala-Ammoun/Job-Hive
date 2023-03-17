@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "Jobs", href: "/Jobs" },
   { name: "About", href: "/About" },
   { name: "Contact", href: "/Contact" },
 ];
@@ -12,7 +13,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Navbar(props) {
+function Navbar(props) {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -77,3 +78,5 @@ export default function Navbar(props) {
     </Disclosure>
   );
 }
+
+export default Navbar
