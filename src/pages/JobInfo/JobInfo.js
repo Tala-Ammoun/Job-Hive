@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchResults from '../SearchResults.json'
 
 function JobInfo() {
   return (

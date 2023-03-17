@@ -1,6 +1,10 @@
 import React from 'react'
+import{useNavigate} from 'react-router-dom'
 
-function Jobs({title,thumbnail,company_name}) {
+function Jobs({title,thumbnail,company_name,id}) {
+  const navigate=useNavigate()
+
+  const clickHandler=(id)=>{navigate("/JobsInfo/"+id)}
   
   
   return (
@@ -16,7 +20,7 @@ function Jobs({title,thumbnail,company_name}) {
         {company_name}
       </p>
     </div>
-    <button className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">More information </button>
+    <button onClick={clickHandler} className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">More information </button>
   </div>
 </div>
 ​
