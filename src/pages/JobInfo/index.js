@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Footer() {
+function index() {
   return (
     <div>
-      Hello there!!
+      <h1>Test Job </h1>
     </div>
   )
 }
 
-export default Footer
+export default index

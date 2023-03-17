@@ -1,11 +1,11 @@
 import React from 'react'
 
-function index() {
+function Contact() {
   return (
     <div>
-      
+      <h1>Test Contact</h1>
     </div>
   )
 }
 
-export default index
+export default Contact
