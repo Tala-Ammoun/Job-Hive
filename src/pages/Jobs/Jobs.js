@@ -1,10 +1,11 @@
 import React from 'react'
 import{useNavigate} from 'react-router-dom'
 
-function Jobs({title,thumbnail,company_name,id}) {
+function Jobs({title,thumbnail,company_name,id,key}) {
   const navigate=useNavigate()
 
-  const clickHandler=(id)=>{navigate("/JobsInfo/"+id)}
+  const clickHandler=()=>{navigate("/JobsInfo/"+id)}
+  
   
   
   return (
