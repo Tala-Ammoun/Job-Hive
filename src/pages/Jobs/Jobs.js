@@ -4,7 +4,7 @@ import{useNavigate} from 'react-router-dom'
 function Jobs({title,thumbnail,company_name,id}) {
   const navigate=useNavigate()
 
-  const clickHandler=()=>{navigate("/JobsInfo/"+id)}
+  const clickHandler=()=>{navigate("/Jobs/"+id)}
   
   
   

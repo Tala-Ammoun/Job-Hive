@@ -22,9 +22,10 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Jobs" element={<JobsSearch />} />
-          <Route path="/JobInfo" element={<JobInfo />} />
+          <Route path="/Jobs/:id" element={<JobInfo />} />
           <Route path="About" element={<About />}/>
           <Route path="/Contact" element={<Contact />} />
+          
           </Routes>
           </BrowserRouter>
       </div>
