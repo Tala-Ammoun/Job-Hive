@@ -1,15 +1,17 @@
 import React from 'react'
 import Jobs from './Jobs'
-import SearchResults from '../SearchResults.json'
+// import SearchResults from '../SearchResults.json'
+import jobTest from  '../../test'
 
 
 function JobsSearch() {
+    console.log(jobTest)
     
     
   return (
     <div>
-      {SearchResults.map((job)=>{
-          return(<div key={job.id}> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id} id={job.id}/>
+      {jobTest.jobs_results.map((job,i)=>{
+          return(<div key={i}> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id} id={i}/>
                        
           </div>)
                  
