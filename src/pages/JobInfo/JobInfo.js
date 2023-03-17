@@ -1,11 +1,12 @@
 import React from 'react'
-import SearchResults from '../SearchResults.json'
+// import SearchResults from '../SearchResults.json'
 import {useParams} from 'react-router-dom'
+import jobTest from  '../../test'
 
 function JobInfo() {
   const {id}=useParams();
-  const job=SearchResults[id]
-  console.log(job)
+  const job=jobTest.jobs_results[id]
+ 
   return (
     <div className="bg-gray-100">
        <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
@@ -15,8 +16,13 @@ function JobInfo() {
       </div>
       <div className="p-8">
         <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{job.title}</div>
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{job.company_name}</div>
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{job.location}</div>
+        <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{job.via}</div>
+        
+
        
-        <p className="mt-2 text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. </p>
+        <p className="mt-2 text-gray-500">{job.description}</p>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">Apply Now</button>
       </div>
     </div>
