@@ -11,12 +11,14 @@ import Jobs from "./pages/Jobs";
 import NavBar from "./components/Navbar";
 import JobInfo from "./pages/JobInfo";
 import About from "./pages/About";
+import SearchBar from "./components/SearchBar";
 
 function App() {
   return (
     <div className="App bg-gray-300 min-h-screen">
       <BrowserRouter>
         <NavBar />
+        <SearchBar/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Jobs" element={<Jobs />} />
