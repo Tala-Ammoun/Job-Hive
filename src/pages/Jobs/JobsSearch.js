@@ -1,5 +1,7 @@
 import React from 'react'
-import Card from './Card'
+import Jobs from './Jobs'
+import SearchResults from '../SearchResults.json'
+
 
 function JobsSearch() {
     const jobSearchResults = [
@@ -26,8 +28,11 @@ function JobsSearch() {
     
   return (
     <div>
-      {jobSearchResults.map((job)=>{
-          return <Card title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id}/>
+      {SearchResults.map((job)=>{
+          return(<div> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id}/>
+                       
+          </div>)
+                 
 
       })}
       

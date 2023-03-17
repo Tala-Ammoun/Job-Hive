@@ -5,19 +5,18 @@ import Contact from './pages/Contact';
 import Home from './pages/Home';
 import JobsSearch from './pages/Jobs/JobsSearch'
 import NavBar from './components/Navbar'
-import JobInfo from './pages/JobInfo';
+import JobInfo from './pages/JobInfo/JobInfo';
 
 function App() {
   return (
     <div >
-
       <Router>
         <NavBar/>
         <Routes>
         <Route path="/Contact" element={<Contact/>}/>
           <Route path="/" element={<Home/>}/>
           <Route path="/Jobs" element={<JobsSearch/>}/>
-          <Route path="/job/:id" element={<JobInfo/>}/>
+          <Route path="/JobsInfo/:id" element={<JobInfo/>}/>
           
         </Routes>
       </Router>
@@ -33,5 +32,6 @@ export default App;
     
     
     
+
 
       
