@@ -9,7 +9,7 @@ function JobsSearch() {
   return (
     <div>
       {SearchResults.map((job)=>{
-          return(<div> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id} id={job.id}/>
+          return(<div key={job.id}> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id} id={job.id}/>
                        
           </div>)
                  

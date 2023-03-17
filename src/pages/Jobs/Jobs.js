@@ -1,7 +1,7 @@
 import React from 'react'
 import{useNavigate} from 'react-router-dom'
 
-function Jobs({title,thumbnail,company_name,id,key}) {
+function Jobs({title,thumbnail,company_name,id}) {
   const navigate=useNavigate()
 
   const clickHandler=()=>{navigate("/JobsInfo/"+id)}
