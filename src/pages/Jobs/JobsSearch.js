@@ -10,6 +10,7 @@ function JobsSearch() {
   }
 
   function handleFetchJobs() {
+    setIsLoading(true)
     const options = {
       method: 'GET',
       headers: {
@@ -22,13 +23,18 @@ function JobsSearch() {
       .then(response => response.json())
       .then(response => {
         setSearchResults(response.data)
-        console.log(response.data)
+        setIsLoading(false)
+        // console.log(response.data)
       })
       .catch(err => console.error(err));
   }
 
   const [searchResults, setSearchResults] = useState([])
   console.log(searchResults)
+  const [isLoading,setIsLoading]=useState(false)
+  if(isLoading){
+    return<p>Loading.....</p>
+  }
 
   return (
     <div>
