@@ -16,8 +16,8 @@ export default function Contact() {
   return (
     <div className="m-2 p-10 bg-slate-200">
       <h1
-        className="text-center font-serif bg-red-900 min-h-100
-      leading-3 text-2xl  text-white py-10 px-20"
+        className="text-center rounded-md font-serif bg-blue-900 min-h-100
+      leading-3 text-2xl text-white py-10 px-20"
       >
         Contact Us
       </h1>
@@ -25,3 +25,4 @@ export default function Contact() {
     </div>
   );
 }
+

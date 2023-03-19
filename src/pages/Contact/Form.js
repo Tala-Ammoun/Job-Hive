@@ -80,7 +80,7 @@ export default function Form() {
             />
             {errors.message && touched.message && <p className="error">{errors.message}</p>}
 
-            <button disabled={isSubmitting} className="mt-5 text-white bg-red-900 rounded-lg px-8 py-3">Send</button>
+            <button disabled={isSubmitting} className="mt-5 text-blue-900 bg-green-400 rounded-lg px-8 py-3">Send</button>
           </div>
 
         </form>
