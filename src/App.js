@@ -15,10 +15,9 @@ import JobInfo from './pages/JobInfo/JobInfo';
 
 export default function App() {
   return (
-    <div className="App bg-gray-300 min-h-screen">
+    <div className="App bg-slate-50 min-h-screen">
       <BrowserRouter>
         <NavBar />
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Jobs" element={<JobsSearch />} />
