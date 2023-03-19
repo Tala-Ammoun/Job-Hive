@@ -19,7 +19,7 @@ function JobsSearch() {
       }
     };
 
-    fetch(`https://jsearch.p.rapidapi.com/search?query=${searchTerm}&page=1&num_pages=1`, options)
+    fetch(`https://jsearch.p.rapidapi.com/search?query=${searchTerm}&page=1&num_pages=10`, options)
       .then(response => response.json())
       .then(response => {
         setSearchResults(response.data)
