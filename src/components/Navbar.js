@@ -15,11 +15,11 @@ function classNames(...classes) {
 
 function Navbar(props) {
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-lime-500 border-solid border-2 border-lime-900">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-14 items-center justify-between">
+            <div className="relative flex h-12 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
                 <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -40,7 +40,7 @@ function Navbar(props) {
                         to={item.href}
                         className={({isActive}) => {
                           return "rounded-md px-3 py-2 text-sm font-medium" + 
-                          (isActive ? "text-gray-300 hover:bg-gray-700 hover:text-white" : "bg-gray-900 text-white")
+                          (isActive ? "text-white bg-lime-200 hover:text-white" : "bg-gray-900 text-white")
                         }}
                       >
                         {item.name}
@@ -62,7 +62,7 @@ function Navbar(props) {
                   className={classNames(
                     item.current
                       ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                      : "text-white hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}
                   aria-current={item.current ? "page" : undefined}

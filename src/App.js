@@ -15,7 +15,7 @@ import JobInfo from './pages/JobInfo/JobInfo';
 
 export default function App() {
   return (
-    <div className="App bg-gray-300 min-h-screen">
+    <div className="App bg-amber-50 min-h-screen">
       <BrowserRouter>
         <NavBar />
         
