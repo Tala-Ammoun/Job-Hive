@@ -2,12 +2,13 @@ import React ,{useState}from 'react'
 import Jobs from './Jobs'
 // import SearchResults from '../SearchResults.json'
 // import SearchBar from '../../components/SearchBar'
-import jobTest from  '../../test'
+// import jobTest from  '../../test'
 
 
 function JobsSearch() {
-    console.log(jobTest)
+  
     const [searchTerm, setSearchTerm] = useState("");
+    const [searchResults, setSearchResults]=useState([])
 
     function handleInputChange(event) {
       setSearchTerm(event.target.value);
@@ -25,7 +26,7 @@ function JobsSearch() {
     
     fetch('https://jsearch.p.rapidapi.com/search?query=Python%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1', options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => setSearchResults(response.data))
       .catch(err => console.error(err));
 
   }
@@ -42,8 +43,8 @@ function JobsSearch() {
    </div>
 </div>
        
-      {jobTest.jobs_results.map((job,i)=>{
-          return(<div key={i}> <Jobs title={job.title} company_name={job.company_name} thumbnail={job.thumbnail} key={job.id} id={i}/>
+      {searchResults.data&&searchResults.data.map((jobsList,i)=>{
+          return(<div key={i}> <Jobs job={jobsList} id={i}/>
                        
           </div>)
                  
