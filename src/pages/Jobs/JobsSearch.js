@@ -24,9 +24,9 @@ function JobsSearch() {
       }
     };
     
-    fetch('https://jsearch.p.rapidapi.com/search?query=Python%20developer%20in%20Texas%2C%20USA&page=1&num_pages=1', options)
+    fetch(`https://jsearch.p.rapidapi.com/search?query=${searchTerm}&page=1&num_pages=1`, options)
       .then(response => response.json())
-      .then(response => setSearchResults(response.data))
+      .then(response => console.log(response.data))
       .catch(err => console.error(err));
 
   }
