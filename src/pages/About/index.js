@@ -1,28 +1,44 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+
 const people = [
   {
     name: 'Ana ',
-    role: 'Co-Founder / CEO',
+    role: 'FrontEnd Web Developer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/u/108739635?v=4',
+    description: "Libero fames augue nisl porttitor nisi, quis.",
+    linkedInUrl: "https://www.linkedin.com/in/anacmwada/",
+    gitHubUrl: "https://github.com/anawada",
+    portfolioUrl: "#",
   },
   {
     name: 'Tala',
-    role: 'Co-Founder / CEO',
-    imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    role: 'FrontEnd Web Developer',
+    imageUrl: 
+      'https://media.licdn.com/dms/image/C4D03AQE5MugdMJDrGg/profile-displayphoto-shrink_800_800/0/1651869103744?e=1684972800&v=beta&t=OpDASZaFIqhvonioAqQLWr0batCc-NRSzg0Y_mH6jZ8',
+    description:"Libero fames augue nisl porttitor nisi, quis.",
+    linkedInUrl: "https://www.linkedin.com/in/tala-ammoun-421152163/",
+    gitHubUrl: "https://github.com/Tala-Ammoun",
+    portfolioUrl: "#",
   },
   {
     name: 'Asher',
-    role: 'Co-Founder / CEO',
+    role: 'FrontEnd Web Developer',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/u/117310101?v=4',
+    description: "Libero fames augue nisl porttitor nisi, quis.",
+    linkedInUrl: "https://www.linkedin.com/in/asher-beck-276454259/",
+    gitHubUrl: "https://github.com/Asherbeck10",
+    portfolioUrl: "#",
   },
-  // More people...
+  
 ]
 
 export default function Example() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-24 sm:py-30">
       <div className="mx-auto grid max-w-7xl gap-y-20 gap-x-8 px-6 lg:px-8 xl:grid-cols-3">
         <div className="max-w-2xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our team</h2>
@@ -39,6 +55,10 @@ export default function Example() {
                 <div>
                   <h3 className="text-base font-semibold leading-7 tracking-tight text-gray-900">{person.name}</h3>
                   <p className="text-sm font-semibold leading-6 text-indigo-600">{person.role}</p>
+                  <p className="text-sm text-text-gray-600">{person.description}</p>
+                  <a className="gitHub mx-1 text-gray-900 hover:text-indigo-600"  href={person.gitHubUrl} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
+                  <a className="linkedIn mx-1 text-gray-900 hover:text-indigo-600" href={person.linkedInUrl} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin}/></a>
+                  <a className="portfolio mx-1 text-gray-900 hover:text-indigo-600" href={person.portfolioUrl} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGlobe}/></a>
                 </div>
               </div>
             </li>
