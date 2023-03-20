@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Jobs from "./Jobs";
-// import JobInfo from '../JobInfo/JobInfo';
+
 
 function JobsSearch() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -95,6 +95,11 @@ function JobsSearch() {
               </div>
             );
           })}
+          {searchResults.length <= currentPage * 5 && (
+          <p className="text-center text-orange-700 font-bold mt-4">
+           No more Results to display.
+          </p>
+       )}
     </div>
   );
 }
