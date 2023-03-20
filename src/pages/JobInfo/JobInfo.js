@@ -14,11 +14,17 @@ function JobInfo() {
       <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
+          {job.employer_logo ?
             <img
               className="h-48 w-full object-cover md:w-48"
               src={job.employer_logo}
               alt="Thumbnail"
             />
+            :
+            <div className="h-48 w-full bg-gray-300 flex justify-center items-center text-white text-xl font-bold">
+      {job.employer_name.charAt(0)}
+    </div>
+  }
           </div>
           <div className="p-8">
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
