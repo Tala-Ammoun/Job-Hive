@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Jobs from './Jobs'
+// import JobInfo from '../JobInfo/JobInfo';
 
 function JobsSearch() {
 
@@ -19,17 +20,20 @@ function JobsSearch() {
       }
     };
 
-    fetch(`https://jsearch.p.rapidapi.com/search?query=${searchTerm}&page=1&num_pages=10`, options)
+    fetch(`https://jsearch.p.rapidapi.com/search?query=${searchTerm}&page=1&num_pages=5`, options)
       .then(response => response.json())
       .then(response => {
         setSearchResults(response.data)
         setIsLoading(false)
+        localStorage.setItem('searchResults', JSON.stringify(response.data));
         // console.log(response.data)
       })
       .catch(err => console.error(err));
+      console.log(searchResults[0])
+    //  return( <JobInfo info={searchResults}/>)
   }
 
-  const [searchResults, setSearchResults] = useState([])
+  const [searchResults, setSearchResults] = useState(JSON.parse(localStorage.getItem('searchResults')) || [])
   console.log(searchResults)
   const [isLoading,setIsLoading]=useState(false)
   if(isLoading){
@@ -45,6 +49,7 @@ function JobsSearch() {
           <button type="submit" onClick={handleFetchJobs} className="search-button flex-none rounded-md bg-indigo-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">Get Hired!</button>
         </div>
       </div>
+     
 
       {/* Null check for searchResults.data */}
       {searchResults && searchResults.map((jobsList, i) => {

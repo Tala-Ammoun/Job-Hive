@@ -1,11 +1,14 @@
 import React from 'react'
+
 import{useNavigate} from 'react-router-dom'
 
 
 function Jobs(props) {
   const navigate=useNavigate()
 
-  const clickHandler=()=>{navigate("/Jobs/"+props.id)}
+  const clickHandler=()=>{navigate("/Jobs/"+props.id)
+
+}
   
   
   
