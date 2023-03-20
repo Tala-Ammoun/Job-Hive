@@ -31,7 +31,7 @@ function Jobs(props) {
             <p className="text-lg text-black font-semibold">
               {props.job.job_title}
             </p>
-            <p className="text-slate-500 font-medium">{props.employer_name}</p>
+            <p className="text-slate-500 font-medium">{props.job.employer_name}</p>
           </div>
           <button
             onClick={clickHandler}
