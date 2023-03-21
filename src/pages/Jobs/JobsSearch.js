@@ -5,11 +5,12 @@ import Jobs from "./Jobs";
 function JobsSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(currentPage)
 
   function handleInputChange(event) {
     setSearchTerm(event.target.value);
   }
-
+//GET API 
   function handleFetchJobs() {
     setIsLoading(true);
     const options = {
@@ -38,7 +39,7 @@ function JobsSearch() {
   const [searchResults, setSearchResults] = useState(
     JSON.parse(localStorage.getItem("searchResults")) || []
   );
-  console.log(searchResults);
+  // console.log(searchResults);
   const [isLoading, setIsLoading] = useState(false);
   if (isLoading) {
     return <p>Loading.....</p>;
@@ -57,7 +58,7 @@ function JobsSearch() {
             value={searchTerm}
             type="input"
             onChange={handleInputChange}
-            className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            className="flex-grow rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
             placeholder="What Job are you looking for?"
           />
           <button
@@ -69,14 +70,17 @@ function JobsSearch() {
           </button>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-            onClick={() => setCurrentPage(currentPage -1)}
+            
+            onClick={() => {if(currentPage>1){
+              setCurrentPage(currentPage -1)}}}
           >
             Prev  5
           </button>
           
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => {if(currentPage*5<searchResults.length){
+              setCurrentPage(currentPage + 1)}}}
           >
             Next 5
           </button>
@@ -90,7 +94,7 @@ function JobsSearch() {
           .map((jobsList, i) => {
             console.log(jobsList);
             return (
-              <div key={i}>
+              <div className="my-4 bg-white shadow-md rounded-md p-4" key={i}>
                 <Jobs job={jobsList} id={i} />
               </div>
             );

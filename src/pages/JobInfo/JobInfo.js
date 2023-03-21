@@ -11,7 +11,7 @@ function JobInfo() {
 
   return (
     <div className="bg-gray-100">
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+      <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
           {job.employer_logo ?
@@ -21,16 +21,16 @@ function JobInfo() {
               alt="Thumbnail"
             />
             :
-            <div className="h-48 w-full bg-gray-300 flex justify-center items-center text-white text-xl font-bold">
+            <div className="h-48 w-full md:w-48 bg-orange-300 flex justify-center items-center text-blue-500 text-9xl font-bold">
       {job.employer_name.charAt(0)}
     </div>
   }
           </div>
           <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-black-500 text-5xl font-semibold">
               {job.job_title}
             </div>
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-blue-500 font-semibold">
               <a
                 href={job.employer_website}
                 target="_blank"
@@ -39,14 +39,14 @@ function JobInfo() {
                 {job.employer_name}
               </a>
             </div>
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-black-500 font-semibold">
               {job.job_city}
             </div>
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-              {job.via}
+              {job.job_publisher}
             </div>
 
-            <p className="mt-2 text-gray-500">{job.job_description}</p>
+            <p className="mt-2 text-black">{job.job_description}</p>
             <a
               href={job.job_apply_link}
               target="_blank"
