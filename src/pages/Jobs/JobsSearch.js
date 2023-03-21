@@ -5,6 +5,7 @@ import Jobs from "./Jobs";
 function JobsSearch() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  console.log(currentPage)
 
   function handleInputChange(event) {
     setSearchTerm(event.target.value);
@@ -57,7 +58,7 @@ function JobsSearch() {
             value={searchTerm}
             type="input"
             onChange={handleInputChange}
-            className="flex-grow rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+            className="flex-grow rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
             placeholder="What Job are you looking for?"
           />
           <button
@@ -78,7 +79,8 @@ function JobsSearch() {
           
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-            onClick={() => setCurrentPage(currentPage + 1)}
+            onClick={() => {if(currentPage*5<searchResults.length){
+              setCurrentPage(currentPage + 1)}}}
           >
             Next 5
           </button>
@@ -97,11 +99,11 @@ function JobsSearch() {
               </div>
             );
           })}
-          {searchResults.length <= currentPage * 5 && (
+          {/* {searchResults.length <= currentPage * 5 && (
           <p className="text-center text-orange-700 font-bold mt-4">
            No more Results to display.
           </p>
-       )}
+       )} */}
     </div>
   );
 }
