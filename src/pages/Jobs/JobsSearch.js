@@ -99,11 +99,11 @@ function JobsSearch() {
               </div>
             );
           })}
-          {/* {searchResults.length <= currentPage * 5 && (
+          {searchResults.length <= currentPage * 5 && (
           <p className="text-center text-orange-700 font-bold mt-4">
            No more Results to display.
           </p>
-       )} */}
+       )}
     </div>
   );
 }
