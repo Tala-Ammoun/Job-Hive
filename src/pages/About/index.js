@@ -54,7 +54,7 @@ function Team() {
     }, typingSpeed);
     return () => clearTimeout(typingTimer);
   }
-  }, [text]);
+  }, [text,index]);
   return (
       <p className="mt-6 text-lg leading-8 text-gray-600 typing-text">
         {text}
