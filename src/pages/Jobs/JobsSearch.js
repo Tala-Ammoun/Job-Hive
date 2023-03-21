@@ -9,7 +9,7 @@ function JobsSearch() {
   function handleInputChange(event) {
     setSearchTerm(event.target.value);
   }
-
+//GET API 
   function handleFetchJobs() {
     setIsLoading(true);
     const options = {
@@ -38,7 +38,7 @@ function JobsSearch() {
   const [searchResults, setSearchResults] = useState(
     JSON.parse(localStorage.getItem("searchResults")) || []
   );
-  console.log(searchResults);
+  // console.log(searchResults);
   const [isLoading, setIsLoading] = useState(false);
   if (isLoading) {
     return <p>Loading.....</p>;
@@ -69,7 +69,9 @@ function JobsSearch() {
           </button>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
-            onClick={() => setCurrentPage(currentPage -1)}
+            
+            onClick={() => {if(currentPage>1){
+              setCurrentPage(currentPage -1)}}}
           >
             Prev  5
           </button>
