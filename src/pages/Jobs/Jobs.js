@@ -20,7 +20,7 @@ function Jobs(props) {
       alt="Thumbnail"
     />
     :
-    <div className="h-39 w-full md:w-39 bg-gray-300 flex justify-center items-center text-white text-xl font-bold">
+    <div className="h-35 w-full md:w-35  flex justify-center items-center text-blue-500 text-5xl font-bold bg-gray-300">
       {props.job.employer_name.charAt(0)}
     </div>
   }
