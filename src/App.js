@@ -12,6 +12,7 @@ import About from "./pages/About";
 import NavBar from "./components/Navbar";
 import JobsSearch from './pages/Jobs/JobsSearch';
 import JobInfo from './pages/JobInfo/JobInfo';
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -24,8 +25,8 @@ export default function App() {
           <Route path="/Jobs/:id" element={<JobInfo />} />
           <Route path="About" element={<About />}/>
           <Route path="/Contact" element={<Contact />} />
-          
           </Routes>
+          <Footer />
           </BrowserRouter>
       </div>
   )}
