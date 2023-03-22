@@ -1,7 +1,8 @@
-import SearchBar from "../../components/SearchBar";
-
+import Button from "../../components/HomePageButton";
 
 export default function Home() {
+
+
   return (
      <div className="">
       <div className="relative isolate px-6 pt-12 lg:px-8">
@@ -13,7 +14,7 @@ export default function Home() {
             <h2 className="mt-6 text-lg leading-8 text-gray-700">
             Apply everywhere all at once!!
             </h2>
-            <SearchBar />
+            <Button />
           </div>
         </div>
        </div>
