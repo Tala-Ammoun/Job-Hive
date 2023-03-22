@@ -10,8 +10,8 @@ function JobInfo() {
   const job = jobs[id];
 
   return (
-    <div className="bg-gray-100">
-      <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div className="bg-slate-100">
+      <div className="max-w-md mx-auto bg-slate-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
           {job.employer_logo ?
@@ -27,10 +27,10 @@ function JobInfo() {
   }
           </div>
           <div className="p-8">
-            <div className="uppercase tracking-wide text-sm text-black-500 text-5xl font-semibold">
+            <div className="uppercase tracking-wide text-sm text-gray-900 text-5xl font-semibold">
               {job.job_title}
             </div>
-            <div className="uppercase tracking-wide text-sm text-blue-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
               <a
                 href={job.employer_website}
                 target="_blank"
@@ -39,10 +39,10 @@ function JobInfo() {
                 {job.employer_name}
               </a>
             </div>
-            <div className="uppercase tracking-wide text-sm text-black-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-gray-900 font-semibold">
               {job.job_city}
             </div>
-            <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+            <div className="uppercase tracking-wide text-sm text-indigo-600 font-semibold">
               {job.job_publisher}
             </div>
 
@@ -52,7 +52,7 @@ function JobInfo() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+              <button className="bg-green-500 hover:bg-green-400 text-indigo-900 font-bold py-2 px-4 rounded mt-4">
                 Apply Now
               </button>
             </a>
