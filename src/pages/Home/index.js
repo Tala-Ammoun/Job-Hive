@@ -29,12 +29,12 @@ function Slogan() {
  return (
    <div className="w-screen h-screen black">
      <div class="text-center container mx-auto flex px-4 pt-6 items-center justify-center flex-col">
-       <img class="lg:w-4/6 md:w-2/6 w-2/6 object-cover object-center" alt="hero" src={logo} />
-       <div class="lg:w-7/12 w-full">
+       <img class="lg:w-0.5/6 md:w-2/6 w-2/6 object-cover object-center" alt="hero" src={logo} />
+       <div class="lg:w-3/12 w-full">
          <h1 className="-ml-2.5 -mt-5 text-7xl font-bold text-indigo-900">
            JobHive
          </h1>
-         <p className="text-2xl mb-8">
+         <p className="text-3xl mb-8">
          <Slogan />
          </p>
          <Button />
