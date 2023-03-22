@@ -1,9 +1,10 @@
 import React from 'react'
 
 function Footer() {
+  const date = new Date();
   return (
-    <div>
-      Hello there!!
+    <div className='text-center'>
+      <p>©  {date.getFullYear()} JobHive</p>
     </div>
   )
 }
