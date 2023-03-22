@@ -21,7 +21,7 @@ function JobInfo() {
               alt="Thumbnail"
             />
             :
-            <div className="h-48 w-full md:w-48 bg-orange-300 flex justify-center items-center text-blue-500 text-9xl font-bold">
+            <div className="h-50 w-full md:w-48  flex justify-center items-center text-blue-500 text-9xl font-bold">
       {job.employer_name.charAt(0)}
     </div>
   }
@@ -43,7 +43,7 @@ function JobInfo() {
               {job.job_city}
             </div>
             <div className="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-              {job.job_publisher}
+              {job.job_min_salary}-{job.job_max_salary}{job.job_salary_currency}
             </div>
 
             <p className="mt-2 text-black">{job.job_description}</p>

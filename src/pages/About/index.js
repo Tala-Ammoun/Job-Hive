@@ -32,7 +32,7 @@ const people = [
     description: "Bringing a wealth of knowledge and experience to the team, Asher is a natural leader who is committed to mentoring junior team members.",
     linkedInUrl: "https://www.linkedin.com/in/asher-beck-276454259/",
     gitHubUrl: "https://github.com/Asherbeck10",
-    portfolioUrl: "#",
+    portfolioUrl: "https://asher-beck-portfolio.vercel.app/",
   },
 ]
 const typingSpeed = 50;
