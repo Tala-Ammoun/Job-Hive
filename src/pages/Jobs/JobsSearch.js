@@ -58,18 +58,18 @@ function JobsSearch() {
             value={searchTerm}
             type="input"
             onChange={handleInputChange}
-            className="min-w-0 flex-auto rounded-md border-2 border-slate-300 bg-white px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-lime-300 sm:text-sm sm:leading-6 w-80"
+            className="min-w-0 flex-auto mr-2 rounded-md border-2 border-slate-300 bg-white px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-lime-300 sm:text-sm sm:leading-6 w-80"
             placeholder="What Job are you looking for?"
           />
           <button
             type="submit"
             onClick={handleFetchJobs}
-            className="  border-50 w-60 search-button flex-none rounded-md bg-indigo-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="mr-4  border-50 w-60 search-button flex-none rounded-md bg-indigo-500 py-2.5 px-3.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
             Get Hired!
           </button>
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
+            className="mr-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4"
             
             onClick={() => {if(currentPage>1){
               setCurrentPage(currentPage -1)}}}
@@ -87,7 +87,7 @@ function JobsSearch() {
         </div>
       </div>
       {searchResults.length <= currentPage * 5 && (
-          <p className="text-center text-orange-700 font-bold mt-4">
+          <p className="text-center text-indigo-900 font-bold mt-4">
            Last Results to display.
           </p>
        )}

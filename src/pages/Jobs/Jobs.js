@@ -10,8 +10,8 @@ function Jobs(props) {
   };
 
   return (
-    <div className="bg-gray-300 hover:bg-gray-500 " >
-      <div className="  py-8 px-8 max-w-sm mx-auto bg-orange-500 rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+    <div className="hover:bg-slate-200 " >
+      <div className="  py-8 px-8 max-w-sm mx-auto bg-indigo-100 rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
       <div className="thumbnail ">
   {props.job.employer_logo ?
     <img
@@ -35,7 +35,7 @@ function Jobs(props) {
           </div>
           <button
             onClick={clickHandler}
-            className="px-4 py-1 text-sm text-black-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+            className="px-4 py-1 text-sm text-white font-semibold bg-indigo-400 rounded-md border border-gray-500 hover:text-white hover:bg-indigo-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
           >
             More information
           </button>

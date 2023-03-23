@@ -10,8 +10,8 @@ function JobInfo() {
   const job = jobs[id];
 
   return (
-    <div className="bg-gray-100">
-      <div className="max-w-md mx-auto bg-gray-300 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+    <div>
+      <div className="max-w-md mx-auto bg-indigo-200 rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">
           {job.employer_logo ?
@@ -21,7 +21,7 @@ function JobInfo() {
               alt="Thumbnail"
             />
             :
-            <div className="h-50 w-full md:w-48  flex justify-center items-center text-blue-500 text-9xl font-bold">
+            <div className="h-50 w-full md:w-48  flex justify-center items-center text-indigo-600 text-9xl font-bold">
       {job.employer_name.charAt(0)}
     </div>
   }
@@ -46,13 +46,13 @@ function JobInfo() {
               {job.job_min_salary}-{job.job_max_salary}{job.job_salary_currency}
             </div>
 
-            <p className="mt-2 text-black">{job.job_description}</p>
+            <p className="mt-2 text-gary-900">{job.job_description}</p>
             <a
               href={job.job_apply_link}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
+              <button className="bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4 rounded mt-4">
                 Apply Now
               </button>
             </a>
