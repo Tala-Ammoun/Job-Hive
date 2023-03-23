@@ -6,7 +6,7 @@ Job Hive is a web application that aggregates all job listings from multiple sou
 
 ## Installation
 
-You can install this app by cloning the GitHub repository to your local computer. Copy the HTTPS link found under the “code” tab. Open Git Bash and run the command “git clone” then pasting the GitHub link. Run the command “code .” to open the files in VS Code.
+As a developer, you can install this app by cloning the GitHub repository to your local computer. Copy the HTTPS link found under the “code” tab. Open Git Bash and run the command “git clone” then pasting the GitHub link. Run the command “code .” to open the files in VS Code.
 
 ```
 git clone <repository link>
