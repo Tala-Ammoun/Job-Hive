@@ -34,7 +34,7 @@ function Slogan() {
          <h1 className="-ml-2.5 -mt-5 text-7xl font-bold text-indigo-900">
            JobHive
          </h1>
-         <p className="text-3xl mb-8">
+         <p className="text-3xl mb-8 ">
          <Slogan />
          </p>
          <Button />

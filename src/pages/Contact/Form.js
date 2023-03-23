@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import { userSchema } from "./index.js";
 import emailjs from '@emailjs/browser';
 
+
 const styles = {
   padding: "20px",
   marginLeft: "auto",
@@ -43,7 +44,7 @@ export default function Form() {
     return (
       <div>
         <form ref={form} onSubmit={handleSubmit}>
-          <div className="text-center p-10 font-serif text-base">
+          <div className="text-center p-10 text-base">
             <input
               style={styles}
               value={values.fullName}
@@ -80,7 +81,7 @@ export default function Form() {
             />
             {errors.message && touched.message && <p className="error">{errors.message}</p>}
 
-            <button disabled={isSubmitting} className="mt-5 text-blue-900 bg-green-400 rounded-lg px-8 py-3">Send</button>
+            <button disabled={isSubmitting} className="font-semibold mt-5 text-amber-400 bg-indigo-900 hover:bg-amber-500 hover:text-indigo-900 rounded-lg mt-8 px-8 py-3">Send</button>
           </div>
 
         </form>
