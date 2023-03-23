@@ -26,7 +26,8 @@ npm start
 
 ## End Result:
 
-![End Result](https://user-images.githubusercontent.com/108739635/227218131-445ff9e5-5621-43af-a0ae-4c534eef9199.mp4)
+https://user-images.githubusercontent.com/108739635/227228328-30659abf-c099-4239-8797-1069a98cc45d.mp4
+
 
 You can find the link to the deployed live webpage here:
 https://job-hive-beta.vercel.app/
