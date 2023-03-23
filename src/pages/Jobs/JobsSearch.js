@@ -68,22 +68,7 @@ function JobsSearch() {
           >
             Get Hired!
           </button>
-          <button
-            className="mr-2 bg-indigo-900 hover:bg-amber-400 text-amber-400 hover:text-indigo-900 font-semi-bold py-2 px-4 rounded mt-4"
-            
-            onClick={() => {if(currentPage>1){
-              setCurrentPage(currentPage -1)}}}
-          >
-            Prev  5
-          </button>
-          
-          <button
-            className="bg-indigo-900 text-amber-400 hover:bg-amber-400 hover:text-indigo-900 font-semi-bold py-2 px-4 rounded mt-4"
-            onClick={() => {if(currentPage*5<searchResults.length){
-              setCurrentPage(currentPage + 1)}}}
-          >
-            Next 5
-          </button>
+         
         </div>
       </div>
       {searchResults.length <= currentPage * 5 && (
@@ -104,8 +89,27 @@ function JobsSearch() {
               </div>
             );
           })}
+          <div className="flex justify-center">
+           <button
+            className="mr-2 bg-indigo-900 hover:bg-amber-400 text-amber-400 hover:text-indigo-900 font-semi-bold py-2 px-4 rounded mt-4"
+            
+            onClick={() => {if(currentPage>1){
+              setCurrentPage(currentPage -1)}}}
+          >
+            Prev  5
+          </button>
+          
+          <button
+            className="bg-indigo-900 text-amber-400 hover:bg-amber-400 hover:text-indigo-900 font-semi-bold py-2 px-4 rounded mt-4"
+            onClick={() => {if(currentPage*5<searchResults.length){
+              setCurrentPage(currentPage + 1)}}}
+          >
+            Next 5
+          </button>
+          </div>
           
     </div>
+    
   );
 }
 
