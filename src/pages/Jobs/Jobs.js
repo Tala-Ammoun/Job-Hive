@@ -11,7 +11,7 @@ function Jobs(props) {
 
   return (
     <div className="flex flex-row flex-wrap py-14 justify-center">
-      <div className=" py-8 px-8 max-w-sm mx-auto bg-amber-100 rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+      <div className=" py-8 px-8 max-w-sm mx-auto bg-amber-100 rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6 w-96 h-50">
         <div className="thumbnail ">
           {props.job.employer_logo ? (
             <img
