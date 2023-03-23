@@ -10,7 +10,7 @@ function JobInfo() {
   const job = jobs[id];
 
   return (
-    <div className="bg-amber-100">
+    <div className="bg-amber-100 min-h-screen">
       <div className="bg-white max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div className="md:flex">
           <div className="md:flex-shrink-0">

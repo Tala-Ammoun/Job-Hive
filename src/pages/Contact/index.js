@@ -14,7 +14,8 @@ export const userSchema = yup.object().shape({
 
 export default function Contact() {
   return (
-    <div className="p-10 bg-amber-400">
+  
+    <div className="p-10 bg-amber-400 min-h-screen">
 
       <h1
         className="text-center tracking-tight rounded-md font-bold leading-3 text-xl text-indigo-900 py-10 px-20 sm:text-5xl"
@@ -23,6 +24,7 @@ export default function Contact() {
       </h1>
       <Form></Form>
     </div>
+    
   );
 };
 
