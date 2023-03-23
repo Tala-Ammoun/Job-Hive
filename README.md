@@ -1,4 +1,4 @@
-# Job Hive Web App Using React and Node.js
+# Job Hive Using React and Node.js
 
 ## Description
 
